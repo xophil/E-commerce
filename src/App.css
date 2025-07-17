@@ -1,0 +1,69 @@
+
+#root{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  background-color: #2874f0;
+}
+button{
+  background-color: white;
+  cursor: pointer;
+}
+button img{
+  background-color: white;
+  width: 24px;
+  align-items: center;
+  align-self: center;
+}
+
+#input-button:focus{
+  outline: none;
+}
+
+
+#best-sellers{
+  background-color: #2874f0;
+}
+#shop {
+  transition: all 0.3s ease;
+}
+
+#shop:hover {
+  box-shadow: 0 0 2px #ffffff, 0 0 20px #ffffff;
+}
+
+h1 img{
+  width: 350px;
+}
+
+#bs-title{
+  font-size: 25px;
+  padding-top: 20px;
+  padding-left: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+#bss-title{
+  font-size: 20px;
+  padding: 20px;
+  color: white;
+}
+
+.bs-image{
+  width: 150px;
+  align-items: end;
+}
+
+
+#item-button{
+  background-color: #2874f0;
+}
+
+
+#filter{
+  border-color: rgb(199, 199, 199);
+}
