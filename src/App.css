@@ -67,3 +67,8 @@ h1 img{
 #filter{
   border-color: rgb(199, 199, 199);
 }
+
+#item-pic{
+  align-items: center;
+  background-color: blue;
+}
