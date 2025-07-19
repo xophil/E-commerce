@@ -59,8 +59,18 @@ h1 img{
 }
 
 
-#item-button{
+#item-button-1{
   background-color: #2874f0;
+  border: solid;
+  border-color: #2874f0;
+  border-radius: 25px;
+  color: white;
+}
+#item-button-2{
+  border: solid;
+  border-color: #2874f0;
+  border-radius: 25px;
+  color:#2874f0;
 }
 
 
@@ -71,4 +81,10 @@ h1 img{
 #item-pic{
   align-items: center;
   background-color: blue;
+}
+
+#cart-btn-mobile{
+  margin-bottom: 90px;
+  background-color: #2874f0;
+  opacity: 100%;
 }

@@ -70,45 +70,69 @@ const [current, setCurrent] = useState(0);
     
     
     
-     <div className="flex flex-col md:flex-row gap-8 p-6 max-w-6xl mx-auto items-center">
-      {/** Image Slider */}
-      <div className="relative w-full md:w-1/2 aspect-square">
-        {/* Left Arrow */}
-        <button
-          onClick={() => setCurrent((prev) => (prev - 1 + images.length) % images.length)}
-          className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition"
-        >
-          <HiArrowSmallLeft size={24} />
-        </button>
+     <div className="flex flex-col md:flex-row gap-8 p-4 md:p-6 max-w-6xl mx-auto items-start relative">
 
-        {/* Image */}
-        <div className="w-full h-full bg-gray-100 flex items-center justify-center rounded-xl overflow-hidden border border-gray-300">
-        <img
-          src={images[current]}
-          alt={product.name}
-          className="max-w-full max-h-full object-contain transition duration-300"
-        />
-      </div>
+                {/* Image Section */}
+                <div className="w-full md:w-1/2">
+                  {/* Image Slider */}
+                  <div className="relative aspect-square w-full mb-4">
+                    {/* Left Arrow */}
+                    <button
+                      onClick={() => setCurrent((prev) => (prev - 1 + images.length) % images.length)}
+                      className="absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition"
+                    >
+                      <HiArrowSmallLeft size={24} />
+                    </button>
 
-        {/* Right Arrow */}
-        <button
-          onClick={() => setCurrent((prev) => (prev + 1) % images.length)}
-          className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition"
-        >
-          <HiArrowSmallRight size={24} />
-        </button>
-      </div>
+                    {/* Image Container */}
+                    <div className="w-full h-full flex items-center justify-center rounded-xl overflow-hidden border border-gray-300">
+                      <img
+                        src={images[current]}
+                        alt={product.name}
+                        className="max-w-full max-h-full object-contain transition duration-300"
+                      />
+                    </div>
 
-      {/** Product Info */}
-      <div className="w-full md:w-1/2">
-        <h1 className="text-4xl font-bold mb-4">{product.name}</h1>
-        <p className="text-gray-700 mb-4 leading-relaxed">{product.description}</p>
-        <p className="text-2xl font-semibold text-blue-600 mb-6">Rs. {product.price}</p>
-        <button id="item-button" className="px-6 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-200">
-          Add to Cart
-        </button>
-      </div>
-    </div>
+                    {/* Right Arrow */}
+                    <button
+                      onClick={() => setCurrent((prev) => (prev + 1) % images.length)}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition"
+                    >
+                      <HiArrowSmallRight size={24} />
+                    </button>
+                  </div>
+
+                  {/* ⬇️ Desktop Buttons Below Image */}
+                  <div className="hidden md:flex gap-4 mt-4">
+                    <button id='item-button-1' className="flex-1 py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition">
+                      Add to Cart
+                    </button>
+                    <button id='item-button-2' className="flex-1 py-3 bg-green-500 text-white rounded-md hover:bg-green-600 transition">
+                      Buy Now
+                    </button>
+                  </div>
+                </div>
+
+                {/* Product Info */}
+                <div className="w-full md:w-1/2">
+                  <h1 className="text-3xl md:text-4xl font-bold mb-4">{product.name}</h1>
+                  <p className="text-gray-700 mb-4 leading-relaxed">{product.description}</p>
+                  <p className="text-gray-700 mb-4 leading-relaxed">Warranty: {product.warranty}</p>
+                  <p className="text-2xl font-semibold text-blue-600 mb-6">Rs. {product.price}</p>
+                </div>
+
+                {/* 📱 Sticky Mobile Buttons */}
+                <div className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 flex md:hidden justify-around px-4 py-3 shadow-md z-50">
+                  <button id='item-button-1' className="flex-1 mr-2 py-3 rounded-md bg-blue-500 text-white font-semibold hover:bg-blue-600 transition">
+                    Add to Cart
+                  </button>
+                  <button id='item-button-2' className="flex-1 ml-2 py-3 rounded-md bg-green-500 text-white font-semibold hover:bg-green-600 transition">
+                    Buy Now
+                  </button>
+                </div>
+</div>
+
+
     </>
     
   );

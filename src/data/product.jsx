@@ -7,6 +7,7 @@ const product = [
     image2: "/public/items/Fitness Items/grip/green 2.jpg",
     image3: "/public/items/Fitness Items/grip/green 3.png",
     description: "Improve your grip strength with this durable hand grip tool.",
+    warranty: "1-Year Manufacturer Warranty",
     category: "fitness"
   },
   {
@@ -17,6 +18,7 @@ const product = [
     image2: "/public/items/Fitness Items/grip/black 2.jpg",
     image3: "/public/items/Fitness Items/grip/black 3.png",
     description: "Great for rehabilitation and strength training.",
+    warranty: "1-Year Manufacturer Warranty",
     category: "fitness"
   },
   {
@@ -27,6 +29,7 @@ const product = [
      image2: "/public/items/Fitness Items/grip/orange 2.png",
      image3: "/public/items/Fitness Items/grip/orange 3.png",
     description: "Great for rehabilitation and strength training.",
+    warranty: "1-Year Manufacturer Warranty",
     category: "fitness"
   },
   {
@@ -37,6 +40,7 @@ const product = [
      image2: "/public/items/Fitness Items/hand/green (2).jpg",
      image3: "/public/items/Fitness Items/hand/green (3).jpg",
     description: "Great for rehabilitation and strength training.",
+    warranty: "1-Year Manufacturer Warranty",
     category: "fitness"
   },
   {
@@ -47,6 +51,7 @@ const product = [
      image2: "/public/items/Fitness Items/hand/lblue (2).jpg",
      image3: "#",
     description: "Great for rehabilitation and strength training.",
+    warranty: "1-Year Manufacturer Warranty",
     category: "fitness"
   },
   {
@@ -57,6 +62,7 @@ const product = [
      image2: "/public/items/Fitness Items/hand/orange (1).jpg",
      image3: "/public/items/Fitness Items/hand/orange (3).jpg",
     description: "Great for rehabilitation and strength training.",
+    warranty: "1-Year Manufacturer Warranty",
     category: "fitness"
   },
   {
@@ -65,6 +71,7 @@ const product = [
     price: 15.49,
      image: "/public/items/Football Gear/gloves/1.jpg",
     description: "Great for rehabilitation and strength training.",
+    warranty: "1-Year Manufacturer Warranty",
     category: "fitness"
   },
   

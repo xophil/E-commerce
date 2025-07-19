@@ -142,13 +142,15 @@ function CategoryPage() {
             <div className="mx-4 my-10 bg-gray-100 p-4 rounded-md">
             <div id="body" className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-4">
                 {products.map((product) => (
-                <div key={product.id} className="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer p-4">
+                <div key={product.id} className="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer p-4 rounded-md">
                     <Link to={`/product/${product.id}`}>
-                    <img
-                        src={product.image}
-                        alt={product.name}
-                        className="h-40 w-full object-cover rounded" // you can adjust h-40 to your preferred height
-                    />
+                    <div className="w-full h-30 flex items-center justify-center rounded-md md:h-60">
+                        <img
+                            src={product.image}
+                            alt={product.name}
+                            className="max-h-full object-contain"
+                        />
+                    </div>
                     <h1 className="text-[15px] font-semibold mt-2 md:text-lg">{product.name}</h1>
                     <div className="flex flex-row items-center gap-5 justify-center md:gap-10">
                         <h2 className="text-[15px] mt-2 md:text-md">Rs. {product.price}</h2>
