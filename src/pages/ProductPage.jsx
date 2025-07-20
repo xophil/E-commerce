@@ -57,7 +57,7 @@ const [current, setCurrent] = useState(0);
             {/* Mobile view - fixed bottom right */}
             <button
             id='cart-btn-mobile'
-            className="fixed bottom-4 right-4 p-5 rounded-full shadow-lg md:hidden"
+            className="fixed bottom-4 right-4 p-5 rounded-full z-50 shadow-lg md:hidden"
             >
                 <FiShoppingCart/>
             </button>
@@ -70,7 +70,7 @@ const [current, setCurrent] = useState(0);
     
     
     
-     <div className="flex flex-col md:flex-row gap-8 p-4 md:p-6 max-w-6xl mx-auto items-start relative">
+     <div className="flex flex-col md:flex-row gap-8 p-4 md:p-6 max-w-6xl mx-auto items-start relative pb-24">
 
                 {/* Image Section */}
                 <div className="w-full md:w-1/2">
@@ -113,13 +113,28 @@ const [current, setCurrent] = useState(0);
                   </div>
                 </div>
 
-                {/* Product Info */}
-                <div className="w-full md:w-1/2">
-                  <h1 className="text-3xl md:text-4xl font-bold mb-4">{product.name}</h1>
-                  <p className="text-gray-700 mb-4 leading-relaxed">{product.description}</p>
+                {/* Product Info 1 */}
+                <div>
+                  <div id="item-info-1" className="w-full md:w-2/2 bg-gray-200 p-9">
+                  <h1 className="text-[#2874f0] text-3xl md:text-4xl font-bold mb-4">{product.name}</h1>
+                  <h2 className="text-2xl md:text-2xl font-bold mb-4 underline">Product Details</h2>
                   <p className="text-gray-700 mb-4 leading-relaxed">Warranty: {product.warranty}</p>
+                  <ol>
+                  <p className="text-gray-700 mb-4 leading-relaxed">Highlights: </p>
+                    <li className="text-gray-700 mb-4 leading-relaxed ml-3"> {product.info}</li>
+                    <li className="text-gray-700 mb-4 leading-relaxed ml-3"> {product.info2}</li>
+                  </ol>
                   <p className="text-2xl font-semibold text-blue-600 mb-6">Rs. {product.price}</p>
                 </div>
+                {/* Product Info 2 */}
+                <div id="item-info-2" className="w-full md:w-2/2 bg-gray-200 mt-5 p-9">
+                  <h2 className="text-2xl md:text-2xl font-bold mb-4 underline">About this Item</h2>
+                  <p className="text-gray-700 mb-4 leading-relaxed">{product.description}</p>
+                  <p className="text-gray-700 mb-4 leading-relaxed">{product.info}</p>
+                  <p className="text-gray-700 mb-4 leading-relaxed">{product.info2}</p>
+                </div>
+                </div>
+
 
                 {/* 📱 Sticky Mobile Buttons */}
                 <div className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 flex md:hidden justify-around px-4 py-3 shadow-md z-50">

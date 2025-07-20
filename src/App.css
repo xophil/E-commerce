@@ -88,3 +88,14 @@ h1 img{
   background-color: #2874f0;
   opacity: 100%;
 }
+
+#item-info-1{
+  border-radius: 25px;
+  text-align: left;
+}
+
+
+#item-info-2{
+  border-radius: 25px;
+  text-align: left;
+}
