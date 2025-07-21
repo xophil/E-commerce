@@ -23,8 +23,8 @@ function CategoryPage() {
         <div id="header-container" className="flex flex-col md:flex-row justify-center items-center gap-3 p-4">
             
             <div className="flex items-center justify-between w-full md:w-auto">
-                <Link to='/'><img src="../public/icons/logo.png" alt="logo" className="w-[150px]" /></Link>
-                <button id="user-btn" className="px-5 py-2 rounded-3xl bg-gray-200 hover:bg-gray-300 md:hidden"><img src="../public/icons/user.png" alt="" /></button>
+                <Link to='/'><img src="/icons/logo.png" alt="logo" className="w-[150px]" /></Link>
+                <button id="user-btn" className="px-5 py-2 rounded-3xl bg-gray-200 hover:bg-gray-300 md:hidden"><img src="/icons/user.png" alt="" /></button>
             </div>
 
             <form action="" className="flex flex-row items-center gap-2 w-full md:w-auto bg-white rounded-md p-2">
@@ -113,7 +113,7 @@ function CategoryPage() {
                 {/* ===== ITEM START ===== */}
                 <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer w-full p-4">
                 <img
-                    src="../public/items/1-thumbnail/badminton.png"
+                    src="/items/1-thumbnail/badminton.png"
                     alt="item"
                     className="h-50% w-full object-cover rounded"
                 />
