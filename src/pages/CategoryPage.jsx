@@ -73,7 +73,7 @@ function CategoryPage() {
 
         {/**==========================LEFT COLUMN============================ */}
 
-    <div id="filter" className="md:w-/4 bg-white rounded-md border-1 p-4 mt-9">
+    <div id="filter" className="md:w-1/4 bg-white rounded-md border-1 p-4 mt-9">
     <h2 className="font-bold text-lg mb-8 text-[#2874f0]">Filters</h2>
 
     <h2 className="text-lg mb-8 text-[#2874f0]">Brands</h2>
@@ -141,7 +141,7 @@ function CategoryPage() {
             {/** This is the regular items */}
             <div className="mx-4 my-10 bg-gray-100 p-4 rounded-md">
             <div id="body" className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-4">
-                {products.map((product) => (
+                {filteredProducts.map((product) => (
                 <div key={product.id} className="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer p-4 rounded-md">
                     <Link to={`/product/${product.id}`}>
                     <div className="w-full h-30 flex items-center justify-center rounded-md md:h-60">
