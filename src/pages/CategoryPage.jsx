@@ -110,19 +110,30 @@ function CategoryPage() {
         <div > {/**This is container for the right side of the page */}
             <div className="mx-4 my-10 bg-gray-100 p-4 rounded-md">
             <div id="body" className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-4">
-                {/* ===== ITEM START ===== */}
-                <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer w-full p-4">
-                <img
-                    src="/items/1-thumbnail/badminton.png"
-                    alt="item"
-                    className="h-50% w-full object-cover rounded"
-                />
-                <h1 className='text-[15px] bg-green-500 md:text-lg'>Bestsellers</h1>
-                <h1 className="text-[15px] font-semibold mt-2 md:text-lg">Badminton</h1>
+                {filteredProducts.map((product) => (
+                <div key={product.id} className="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer p-4 rounded-md">
+                    <Link to={`/product/${product.id}`}>
+                    <div className="w-full h-30 flex items-center justify-center rounded-md md:h-60">
+                        <img
+                            src={product.image}
+                            alt={product.name}
+                            className="max-h-full object-contain"
+                        />
+                    </div>
+                    <h1 className='text-[15px] bg-green-500 md:text-lg'>Bestsellers</h1>
+                    <h1 className="text-[15px] font-semibold mt-2 md:text-lg">{product.name}</h1>
+                    <div className="flex flex-row items-center gap-5 justify-center md:gap-10">
+                        <h2 className="text-[15px] mt-2 md:text-md">Rs. {product.price}</h2>
+                        <button className="mt-2 border border-[#2874f0] p-2 rounded-md text-[#2874f0] hover:bg-[#2874f0] hover:text-white transition">
+                        Add
+                        </button>
+                    </div>
+                    </Link>
                 </div>
-                {/* ===== ITEM END ===== */}
+                ))}
             </div>
-        </div>
+            </div>
+    
 
 
 

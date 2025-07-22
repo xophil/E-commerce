@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
 import '../App.css'
+import product from '../data/product';
 
 function Bestseller(){
+
+    const bestSellers = product.filter(product => product.item === "bestseller")
     return(
         <>
         {/**==========================HEADER============================ */}
@@ -52,154 +55,32 @@ function Bestseller(){
 
       {/**==========================HEADER============================ */}
       <div>
+            <div className="mx-4 my-10 bg-gray-100 p-4 rounded-md">
+            <h2 className="text-2xl font-bold text-[#2874f0] mb-4">Best Sellers</h2>
 
-
-
-
-
-        {/**ITEM CATEGORIES */}
-
-        <div className="mx-4 md:mx-30 my-10 bg-gray-100 p-4 rounded-md">
-        <h1 className="font-bold text-[24px] md:text-[30px] underline">BEST SELLERS!!</h1>
-
-            <div id="body" className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-4">
-                {/* ===== ITEM START ===== */}
-                <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer w-full p-4">
-                <img
-                    src="/items/1-thumbnail/badminton.png"
-                    alt="item"
-                    className="h-50% w-full object-cover rounded"
-                />
-                <h1 className="text-lg font-semibold mt-2">Badminton</h1>
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mt-4">
+                {bestSellers.map((product) => (
+                <div key={product.id} className="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer p-4">
+                    <Link to={`/product/${product.id}`}>
+                    <div className="w-full h-30 flex items-center justify-center rounded-md md:h-60">
+                        <img
+                        src={product.image}
+                        alt={product.name}
+                        className="max-h-full object-contain"
+                        />
+                    </div>
+                    <h1 className="text-[15px] font-semibold mt-2 md:text-lg">{product.name}</h1>
+                    <div className="flex flex-row items-center gap-5 justify-center md:gap-10">
+                        <h2 className="text-[15px] mt-2 md:text-md">Rs. {product.price}</h2>
+                        <button className="mt-2 border border-[#2874f0] p-2 rounded-md text-[#2874f0] hover:bg-[#2874f0] hover:text-white transition">
+                        Add
+                        </button>
+                    </div>
+                    </Link>
                 </div>
-                {/* ===== ITEM END ===== */}
-                {/* ===== ITEM START ===== */}
-                <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer w-full p-4">
-                <img
-                    src="/items/1-thumbnail/basketball.png"
-                    alt="item"
-                    className="h-50% w-full object-cover rounded"
-                />
-                <h1 className="text-lg font-semibold mt-2">Basketball</h1>
-                </div>
-                {/* ===== ITEM END ===== */}
-                {/* ===== ITEM START ===== */}
-                <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer w-full p-4">
-                <img
-                    src="/items/1-thumbnail/uno.png"
-                    alt="item"
-                    className="h-50% w-full object-cover rounded"
-                />
-                <h1 className="text-lg font-semibold mt-2">Card Games</h1>
-                </div>
-                {/* ===== ITEM END ===== */}
-                {/* ===== ITEM START ===== */}
-                <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer w-full p-4">
-                <img
-                    src="/items/1-thumbnail/cricket.png"
-                    alt="item"
-                    className="h-50% w-full object-cover rounded"
-                />
-                <h1 className="text-lg font-semibold mt-2">Cricket</h1>
-                </div>
-                {/* ===== ITEM END ===== */}
-                {/* ===== ITEM START ===== */}
-                <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer w-full p-4">
-                <img
-                    src="/items/1-thumbnail/cycles.png"
-                    alt="item"
-                    className="h-50% w-full object-cover rounded"
-                />
-                <h1 className="text-lg font-semibold mt-2">Cycles</h1>
-                </div>
-                {/* ===== ITEM END ===== */}
-                {/* ===== ITEM START ===== */}
-                <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer w-full p-4">
-                <img
-                    src="/items/1-thumbnail/bars.png"
-                    alt="item"
-                    className="h-50% w-full object-cover rounded"
-                />
-                <h1 className="text-lg font-semibold mt-2">Fitness Items</h1>
-                </div>
-                {/* ===== ITEM END ===== */}
-                {/* ===== ITEM START ===== */}
-                <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer w-full p-4">
-                <img
-                    src="/items/1-thumbnail/football.png"
-                    alt="item"
-                    className="h-50% w-full object-cover rounded"
-                />
-                <h1 className="text-lg font-semibold mt-2">Football</h1>
-                </div>
-                {/* ===== ITEM END ===== */}
-                {/* ===== ITEM START ===== */}
-                <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer w-full p-4">
-                <img
-                    src="/items/1-thumbnail/dumbells.png"
-                    alt="item"
-                    className="h-50% w-full object-cover rounded"
-                />
-                <h1 className="text-lg font-semibold mt-2">Gym</h1>
-                </div>
-                {/* ===== ITEM END ===== */}
-                {/* ===== ITEM START ===== */}
-                <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer w-full p-4">
-                <img
-                    src="/items/1-thumbnail/ma.png"
-                    alt="item"
-                    className="h-50% w-full object-cover rounded"
-                />
-                <h1 className="text-lg font-semibold mt-2">Martial Arts</h1>
-                </div>
-                {/* ===== ITEM END ===== */}
-                {/* ===== ITEM START ===== */}
-                <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer w-full p-4">
-                <img
-                    src="/items/1-thumbnail/pumps.png"
-                    alt="item"
-                    className="h-50% w-full object-cover rounded"
-                />
-                <h1 className="text-lg font-semibold mt-2">Sports Accessories</h1>
-                </div>
-                {/* ===== ITEM END ===== */}
-                {/* ===== ITEM START ===== */}
-                <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer w-full p-4">
-                <img
-                    src="/items/1-thumbnail/supp-wear.png"
-                    alt="item"
-                    className="h-50% w-full object-cover rounded"
-                />
-                <h1 className="text-lg font-semibold mt-2">Support Wear</h1>
-                </div>
-                {/* ===== ITEM END ===== */}
-                {/* ===== ITEM START ===== */}
-                <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer w-full p-4">
-                <img
-                    src="/items/1-thumbnail/tt.png"
-                    alt="item"
-                    className="h-50% w-full object-cover rounded"
-                />
-                <h1 className="text-lg font-semibold mt-2">Table Tennis</h1>
-                </div>
-                {/* ===== ITEM END ===== */}
-                {/* ===== ITEM START ===== */}
-                <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition cursor-pointer w-full p-4">
-                <img
-                    src="/items/1-thumbnail/wb.png"
-                    alt="item"
-                    className="h-50% w-full object-cover rounded"
-                />
-                <h1 className="text-lg font-semibold mt-2">Water Bottle</h1>
-                </div>
-                {/* ===== ITEM END ===== */}
+                ))}
             </div>
-        </div>
-
-
-
-
-
+            </div>
 
       </div>
 
